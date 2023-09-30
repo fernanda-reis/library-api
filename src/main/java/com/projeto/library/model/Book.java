@@ -15,9 +15,7 @@ public class Book {
     @Column(name = "name", nullable = false)
     private String name;
 
-    private String country;
-
-    private String yearOfRelease;
+    private Integer yearOfRelease;
 
     @ManyToOne
     private Author author;
