@@ -35,13 +35,13 @@ public class BookController {
         return ResponseEntity.ok(service.getByName(name));
     }
 
-    @GetMapping("/author/{author}")
-    public ResponseEntity<BookResponse> getByAuthorId(@PathVariable Integer authorId) {
+    @GetMapping("/author/{authorId}")
+    public ResponseEntity<List<BookResponse>> getByAuthorId(@PathVariable Integer authorId) {
         return ResponseEntity.ok(service.getByAuthorId(authorId));
     }
 
-    @GetMapping("/year/{year}")
-    public ResponseEntity<BookResponse> getByYearOfRelease(@PathVariable Integer yearOfRelease) {
+    @GetMapping("/year/{yearOfRelease}")
+    public ResponseEntity<List<BookResponse>> getByYearOfRelease(@PathVariable Integer yearOfRelease) {
         return ResponseEntity.ok(service.getByYearOfRelease(yearOfRelease));
     }
 
@@ -50,10 +50,12 @@ public class BookController {
         return ResponseEntity.ok(service.getAll());
     }
 
-    public ResponseEntity<BookResponse> update(@RequestBody BookRequest bookRequest){
-        return ResponseEntity.ok(service.udpate(bookRequest));
+    @PutMapping("/{id}")
+    public ResponseEntity<BookResponse> update(@PathVariable Integer id, @RequestBody BookRequest bookRequest){
+        return ResponseEntity.ok(service.udpate(id, bookRequest));
     }
 
+    @DeleteMapping("/{id}")
     public void delete(@PathVariable Integer id) {
         service.delete(id);
     }

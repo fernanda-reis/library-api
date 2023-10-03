@@ -41,21 +41,22 @@ public class BookService {
     public BookResponse getByName(String name) {
         return BookConverter.toResponse(bookRepository.findByName(name).get());
     }
-    public BookResponse getByAuthorId(Integer authorId) {
-        return BookConverter.toResponse(bookRepository.findByAuthorId(authorId).get());
+    public List<BookResponse> getByAuthorId(Integer authorId) {
+        return BookConverter.toResponseList(bookRepository.findByAuthorId(authorId));
     }
-    public BookResponse getByYearOfRelease(Integer year) {
-        return BookConverter.toResponse(bookRepository.findByYearOfRelease(year).get());
+    public List<BookResponse> getByYearOfRelease(Integer year) {
+        return BookConverter.toResponseList(bookRepository.findByYearOfRelease(year));
     }
     public List<BookResponse> getAll(){
         return BookConverter.toResponseList(bookRepository.findAll());
     }
 
-    public BookResponse udpate(BookRequest bookRequest) {
+    public BookResponse udpate(Integer id, BookRequest bookRequest) {
         Author author = authorRepository.findById(bookRequest.getAuthorId()).get();
         Category category = categoryRepository.findById(bookRequest.getCategoryId()).get();
 
         Book book = BookConverter.toEntity(bookRequest, author, category);
+        book.setId(id);
         return BookConverter.toResponse(bookRepository.save(book));
     }
 

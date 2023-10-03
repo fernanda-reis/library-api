@@ -20,7 +20,7 @@ public class Loan {
     private Date loanStart;
     private Date loanEnd;
     @ManyToOne
-    private Patron patron;
+    private User user;
     @ManyToMany
     private List<Book> books;
 

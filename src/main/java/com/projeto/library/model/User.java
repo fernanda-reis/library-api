@@ -1,12 +1,17 @@
 package com.projeto.library.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.Getter;
+
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
-@Table(name = "patrons")
+@Table(name = "users")
 @Getter @Setter
-public class Patron {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
