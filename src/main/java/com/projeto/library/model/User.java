@@ -23,6 +23,6 @@ public class User {
     private String email;
 
     @Column(name = "password", nullable = false)
-    private Integer password;
+    private String password;
 
 }

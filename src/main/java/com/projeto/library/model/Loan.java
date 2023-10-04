@@ -17,8 +17,6 @@ public class Loan {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Date loanStart;
-    private Date loanEnd;
     @ManyToOne
     private User user;
     @ManyToMany
