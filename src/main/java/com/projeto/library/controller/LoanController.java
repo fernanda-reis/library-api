@@ -3,6 +3,7 @@ package com.projeto.library.controller;
 import com.projeto.library.controller.dto.LoanRequest;
 import com.projeto.library.controller.dto.LoanResponse;
 import com.projeto.library.service.LoanService;
+import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -25,10 +26,15 @@ public class LoanController {
 
 
     @GetMapping
-    public ResponseEntity<List<LoanResponse>> getOrder(
+    public ResponseEntity<List<LoanResponse>> getAll(
             @RequestParam(name = "userId", required = false) Integer userId,
             @RequestParam(name = "bookId", required = false) Integer bookId
     ){
         return ResponseEntity.ok(service.getAll(userId, bookId));
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<LoanResponse> getById(@PathVariable Integer id){
+        return ResponseEntity.ok(service.getById(id));
     }
 }

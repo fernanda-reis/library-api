@@ -6,10 +6,12 @@ import com.projeto.library.model.User;
 import com.projeto.library.repository.UserRepository;
 import com.projeto.library.utils.UserConverter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class UserService {
 
     @Autowired

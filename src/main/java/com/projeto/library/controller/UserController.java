@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import java.net.URI;
 import java.util.List;
 
-
+@RestController
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
@@ -37,7 +38,7 @@ public class UserController {
     }
 
     @GetMapping("/name/{name}")
-    public ResponseEntity<List<UserResponse>> getAllByName(@PathVariable String name, @PathVariable Integer id){
+    public ResponseEntity<List<UserResponse>> getAllByName(@PathVariable String name){
         return ResponseEntity.ok(service.getAllByName(name));
     }
 

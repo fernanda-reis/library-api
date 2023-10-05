@@ -13,4 +13,5 @@ public interface LoanRepository extends JpaRepository<Loan, Integer>  {
     @Query(value = "SELECT loan FROM Loan loan JOIN loan.books book WHERE book.id = :bookId")
     List<Loan> findAllByBook(Integer bookId);
 
+
 }

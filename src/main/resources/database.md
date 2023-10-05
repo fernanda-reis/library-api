@@ -33,4 +33,9 @@ VALUES
 ('Norwegian Wood', 1987, 5, 2), -- Autor ID 5 (Haruki Murakami), Categoria ID 2 (Romance)
 ('1Q84', 2009, 5, 3);          -- Autor ID 5 (Haruki Murakami), Categoria ID 3 (Fantasia)
 
+INSERT INTO users (name, email, password)
+VALUES
+('maria', 'maria@example.com', 'senha1'),
+('fernanda', 'fernanda@example.com', 'senha2'),
+('joão', 'joao@example.com', 'senha3');
 

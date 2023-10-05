@@ -52,7 +52,7 @@ public class LoanService {
     }
 
     public List<LoanResponse> getAll(Integer userId, Integer bookId){
-        if( userId != null ){
+        if( userId != null ) {
             return findAllByUser(userId);
         } else if(bookId != null){
             return findAllByBook(bookId);
