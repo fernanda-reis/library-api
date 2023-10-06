@@ -32,10 +32,10 @@ public class UserController {
         return ResponseEntity.created(URI.create("/user/" + userResponse.getId())).body(userResponse);
     }
 
-    @GetMapping("/email/{email}")
-    public ResponseEntity<UserResponse> getUserByEmail(@PathVariable String email){
-        return  ResponseEntity.ok(service.getByEmail(email));
-    }
+//    @GetMapping("/email/{email}")
+//    public ResponseEntity<UserResponse> getUserByEmail(@PathVariable String email){
+//        return  ResponseEntity.ok(service.getByEmail(email));
+//    }
 
     @GetMapping("/name/{name}")
     public ResponseEntity<List<UserResponse>> getAllByName(@PathVariable String name){

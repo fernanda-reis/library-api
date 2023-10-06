@@ -6,6 +6,7 @@ import com.projeto.library.model.User;
 import com.projeto.library.repository.UserRepository;
 import com.projeto.library.utils.UserConverter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,6 +17,10 @@ public class UserService {
 
     @Autowired
     UserRepository repository;
+
+    @Autowired
+    PasswordEncoder passwordEncoder;
+
     public UserResponse getById(Integer id) {
         Optional<User> userResponse =  repository.findById(id);
         if(userResponse.isPresent()){
@@ -35,13 +40,16 @@ public class UserService {
 
     public UserResponse save(UserRequest userRequest) {
         User user = UserConverter.toEntity(userRequest);
+
+        String encodedPassword = passwordEncoder.encode(user.getPassword());
+        user.setPassword(encodedPassword);
+
         return UserConverter.toResponse(repository.save(user));
     }
 
-    public UserResponse getByEmail(String email) {
-        return UserConverter.toResponse(repository.findByEmail(email).get());
-
-    }
+//    public UserResponse getByEmail(String email) {
+//        return UserConverter.toResponse(repository.findByEmail(email).get());
+//    }
 
     public void delete(Integer id) {
         repository.deleteById(id);
