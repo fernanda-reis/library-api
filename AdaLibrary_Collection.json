@@ -1,0 +1,839 @@
+{
+	"info": {
+		"_postman_id": "340a0450-456a-4234-b39f-3fb494487b6f",
+		"name": "AdaLibrary",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8106826"
+	},
+	"item": [
+		{
+			"name": "author",
+			"item": [
+				{
+					"name": "localhost:8080/author",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/author",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"author"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/author/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/author/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"author",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/author/name/name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/author/name/Pablo Neruda",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"author",
+								"name",
+								"Pablo Neruda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/author/country/Chile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/author/country/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"author",
+								"country",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/author",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZXJuYW5kYUBob3RtYWlsLmNvbSIsImlkIjoxLCJuYW1lIjoiZmVybmFuZGEiLCJleHAiOjE2OTY3OTI0MzIsImlzcyI6IkFkYSBUZWNoIn0.24TpajofyAYyE_lbfNkYTP1RFddP6vGdgH8uUzuG1ks7UcQ31-yYn4GMtdOSFg3b6y7mETuaab7dbMHrohmWWA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"name\": \"Machado de Assis\",\r\n    \"country\" : \"Brasil\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/author",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"author"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/author/id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZXJuYW5kYUBob3RtYWlsLmNvbSIsImlkIjoxLCJuYW1lIjoiZmVybmFuZGEiLCJleHAiOjE2OTY3ODc4MDYsImlzcyI6IkFkYSBUZWNoIn0.mViqXOXRtKseXykhxkNBMYeLjukdoJj1HFVX5gALXcVHNE2NoJcHOWXU7fNJD1l-mTNYOSpXKd_eIKL0IiLiHQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Arundhati Roy\",\r\n    \"country\":\"Índia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/author/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"author",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/author/id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZXJuYW5kYUBob3RtYWlsLmNvbSIsImlkIjoxLCJuYW1lIjoiZmVybmFuZGEiLCJleHAiOjE2OTY3ODc4MDYsImlzcyI6IkFkYSBUZWNoIn0.mViqXOXRtKseXykhxkNBMYeLjukdoJj1HFVX5gALXcVHNE2NoJcHOWXU7fNJD1l-mTNYOSpXKd_eIKL0IiLiHQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/author/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"author",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "localhost:8080/category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/category",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/category/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/category/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"category",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/category/name/name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/category/name/Ficção",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"category",
+								"name",
+								"Ficção"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZXJuYW5kYUBob3RtYWlsLmNvbSIsImlkIjoxLCJuYW1lIjoiZmVybmFuZGEiLCJleHAiOjE2OTY3ODc4MDYsImlzcyI6IkFkYSBUZWNoIn0.mViqXOXRtKseXykhxkNBMYeLjukdoJj1HFVX5gALXcVHNE2NoJcHOWXU7fNJD1l-mTNYOSpXKd_eIKL0IiLiHQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Terror\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/category",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/category/id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZXJuYW5kYUBob3RtYWlsLmNvbSIsImlkIjoxLCJuYW1lIjoiZmVybmFuZGEiLCJleHAiOjE2OTY3ODc4MDYsImlzcyI6IkFkYSBUZWNoIn0.mViqXOXRtKseXykhxkNBMYeLjukdoJj1HFVX5gALXcVHNE2NoJcHOWXU7fNJD1l-mTNYOSpXKd_eIKL0IiLiHQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Biografias\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/category/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/category/id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZXJuYW5kYUBob3RtYWlsLmNvbSIsImlkIjoxLCJuYW1lIjoiZmVybmFuZGEiLCJleHAiOjE2OTY3ODc4MDYsImlzcyI6IkFkYSBUZWNoIn0.mViqXOXRtKseXykhxkNBMYeLjukdoJj1HFVX5gALXcVHNE2NoJcHOWXU7fNJD1l-mTNYOSpXKd_eIKL0IiLiHQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Pablito Neruda\",\r\n    \"country\":\"Chile\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/category/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "book",
+			"item": [
+				{
+					"name": "localhost:8080/book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/book",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/book/id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Emma\",\r\n    \"yearOfRelease\":1815,\r\n    \"author\":2,\r\n    \"category\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/book/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/book/name/name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Emma\",\r\n    \"yearOfRelease\":1815,\r\n    \"author\":2,\r\n    \"category\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/book/name/Guerra e Paz",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book",
+								"name",
+								"Guerra e Paz"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/book/author/id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Emma\",\r\n    \"yearOfRelease\":1815,\r\n    \"author\":2,\r\n    \"category\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/book/author/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book",
+								"author",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/book/year/yearOfRelease",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Emma\",\r\n    \"yearOfRelease\":1815,\r\n    \"author\":2,\r\n    \"category\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/book/year/1975",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book",
+								"year",
+								"1975"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZXJuYW5kYUBob3RtYWlsLmNvbSIsImlkIjoxLCJuYW1lIjoiZmVybmFuZGEiLCJleHAiOjE2OTY3ODc4MDYsImlzcyI6IkFkYSBUZWNoIn0.mViqXOXRtKseXykhxkNBMYeLjukdoJj1HFVX5gALXcVHNE2NoJcHOWXU7fNJD1l-mTNYOSpXKd_eIKL0IiLiHQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Emma\",\r\n    \"yearOfRelease\":1891,\r\n    \"authorId\": 2,\r\n    \"categoryId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/book",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/book/id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZXJuYW5kYUBob3RtYWlsLmNvbSIsImlkIjoxLCJuYW1lIjoiZmVybmFuZGEiLCJleHAiOjE2OTY3ODc4MDYsImlzcyI6IkFkYSBUZWNoIn0.mViqXOXRtKseXykhxkNBMYeLjukdoJj1HFVX5gALXcVHNE2NoJcHOWXU7fNJD1l-mTNYOSpXKd_eIKL0IiLiHQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Emma\",\r\n    \"yearOfRelease\":2023,\r\n    \"authorId\": 2,\r\n    \"categoryId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/book/11",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/book/id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZXJuYW5kYUBob3RtYWlsLmNvbSIsImlkIjoxLCJuYW1lIjoiZmVybmFuZGEiLCJleHAiOjE2OTY3ODc4MDYsImlzcyI6IkFkYSBUZWNoIn0.mViqXOXRtKseXykhxkNBMYeLjukdoJj1HFVX5gALXcVHNE2NoJcHOWXU7fNJD1l-mTNYOSpXKd_eIKL0IiLiHQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Emma\",\r\n    \"yearOfRelease\":1815,\r\n    \"author\":2,\r\n    \"category\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/book/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "localhost:8080/user/id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"fernanda\",\r\n    \"email\":\"fernanda@hotmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/user/name/name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"fernanda\",\r\n    \"email\":\"fernanda@hotmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user/name/fernanda",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"name",
+								"fernanda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"fernanda\",\r\n    \"email\":\"fernanda@hotmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"fernanda\",\r\n    \"email\":\"fernanda@hotmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "loan",
+			"item": [
+				{
+					"name": "localhost:8080/loan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/loan",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"loan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/loan?userId=1&bookId=2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/loan?userId=2&bookId=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"loan"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "2"
+								},
+								{
+									"key": "bookId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/loan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZXJuYW5kYUBob3RtYWlsLmNvbSIsImlkIjoxLCJuYW1lIjoiZmVybmFuZGEiLCJleHAiOjE2OTY3ODc4MDYsImlzcyI6IkFkYSBUZWNoIn0.mViqXOXRtKseXykhxkNBMYeLjukdoJj1HFVX5gALXcVHNE2NoJcHOWXU7fNJD1l-mTNYOSpXKd_eIKL0IiLiHQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":3,\r\n    \"booksIds\":[2,7]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/loan",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"loan"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "localhost:8080/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"fernanda@hotmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
