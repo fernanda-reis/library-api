@@ -1,5 +1,5 @@
 # library-api
-Projeto de API de uma biblioteca virtual para o módulo 3 do #btgfaztech.
+Projeto de API de uma biblioteca virtual para o módulo 3 do curso #btgfaztech da ADA.
 
 Especificações: 
 - Java 17
