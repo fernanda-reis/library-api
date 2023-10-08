@@ -1,6 +1,8 @@
 package com.projeto.library.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -22,14 +24,17 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @NotBlank
     @Column(name = "name", nullable = false)
     private String name;
 
+    @Email
     @Column(name = "email", nullable = false, unique = true)
     private String email;
 
     @Column(name = "password", nullable = false)
     private String password;
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
