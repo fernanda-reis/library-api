@@ -12,6 +12,7 @@ public interface BookRepository extends JpaRepository<Book, Integer> {
 
     @Query(value = "SELECT * FROM BOOKS WHERE AUTHOR_ID = :authorId", nativeQuery = true)
     List<Book> findByAuthorId(Integer authorId);
+
     List<Book> findByYearOfRelease(Integer year);
 
 }

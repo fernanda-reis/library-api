@@ -28,17 +28,24 @@ public class UserController {
 
     @PostMapping()
     public ResponseEntity<UserResponse> save(@RequestBody UserRequest userRequest){
-        UserResponse userResponse = service.save(userRequest);
+        UserResponse userResponse;
+
+        try {
+            userResponse = service.save(userRequest);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
+
         return ResponseEntity.created(URI.create("/user/" + userResponse.getId())).body(userResponse);
     }
 
-//    @GetMapping("/email/{email}")
-//    public ResponseEntity<UserResponse> getUserByEmail(@PathVariable String email){
-//        return  ResponseEntity.ok(service.getByEmail(email));
-//    }
-
     @GetMapping("/name/{name}")
     public ResponseEntity<List<UserResponse>> getAllByName(@PathVariable String name){
+        try {
+            List<UserResponse> users = service.getAllByName(name);
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
         return ResponseEntity.ok(service.getAllByName(name));
     }
 

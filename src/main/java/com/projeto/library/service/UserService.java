@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,7 +27,7 @@ public class UserService {
         if(userResponse.isPresent()){
             return UserConverter.toResponse(userResponse.get());
         } else {
-            throw new RuntimeException("Usuário não encontrado");
+            throw new RuntimeException("User not found.");
         }
     }
 
@@ -35,21 +36,27 @@ public class UserService {
     }
 
     public List<UserResponse> getAllByName(String name){
-        return UserConverter.toResponseList(repository.findAllByName(name));
+        List<User> users;
+        users = repository.findAllByName(name);
+
+        if(users.isEmpty()) {
+            throw new RuntimeException("No users found.");
+        }
+        return UserConverter.toResponseList(users);
     }
 
     public UserResponse save(UserRequest userRequest) {
         User user = UserConverter.toEntity(userRequest);
+
+        if (!userRequest.getEmail().contains("@") ) {
+            throw new RuntimeException("Invalid email format.");
+        }
 
         String encodedPassword = passwordEncoder.encode(user.getPassword());
         user.setPassword(encodedPassword);
 
         return UserConverter.toResponse(repository.save(user));
     }
-
-//    public UserResponse getByEmail(String email) {
-//        return UserConverter.toResponse(repository.findByEmail(email).get());
-//    }
 
     public void delete(Integer id) {
         repository.deleteById(id);
