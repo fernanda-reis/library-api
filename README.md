@@ -12,3 +12,4 @@ Como utilizar:
 - execute o endpoint POST /login para recuperar o token de acesso de usuário cadastrado;
 - insira o token no formato "Bearer " + {token}" como valor da chave Authentication na aba Headers para ter acesso a todos os endpoints.
 
+📌 [Testes End-to-End](https://github.com/fernanda-reis/library-api-test)
