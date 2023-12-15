@@ -32,12 +32,13 @@ public class SecurityConfig {
         MvcRequestMatcher.Builder mvcMatcherBuilder = new MvcRequestMatcher.Builder(introspector);
         return httpSecurity.csrf(csrf -> csrf.disable())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                //.authorizeHttpRequests(requests -> requests
-                       // .requestMatchers(mvcMatcherBuilder.pattern(HttpMethod.GET, "/*")).permitAll()
-                        //.requestMatchers(mvcMatcherBuilder.pattern(HttpMethod.POST, "/user")).permitAll()
-                        //.requestMatchers(mvcMatcherBuilder.pattern(HttpMethod.POST, "/login")).permitAll()
-                        //.anyRequest().authenticated()
-                //).addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
+                .authorizeHttpRequests(requests -> requests
+                        .requestMatchers(mvcMatcherBuilder.pattern(HttpMethod.POST, "/user")).permitAll()
+                        .requestMatchers(mvcMatcherBuilder.pattern(HttpMethod.POST, "/login")).permitAll()
+                        .requestMatchers(mvcMatcherBuilder.pattern(HttpMethod.GET, "/**")).permitAll()
+
+                        .anyRequest().authenticated()
+                ).addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
 

@@ -23,7 +23,7 @@ import java.util.List;
 
 
 @SpringBootTest
-@AutoConfigureMockMvc
+@AutoConfigureMockMvc(addFilters = false)
 class BookControllerIntegrationTest {
 
     BookRequest bookRequest;

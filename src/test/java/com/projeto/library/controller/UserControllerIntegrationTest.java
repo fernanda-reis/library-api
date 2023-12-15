@@ -21,7 +21,7 @@ import java.util.List;
 
 
 @SpringBootTest
-@AutoConfigureMockMvc
+@AutoConfigureMockMvc(addFilters = false)
 class UserControllerIntegrationTest {
 
     UserRequest userRequest;

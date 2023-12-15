@@ -21,7 +21,7 @@ import java.util.List;
 
 
 @SpringBootTest
-@AutoConfigureMockMvc
+@AutoConfigureMockMvc(addFilters = false)
 class AuthorControllerIntegrationTest {
     AuthorRequest authorRequest;
     AuthorResponse authorResponse;
