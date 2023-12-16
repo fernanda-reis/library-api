@@ -10,7 +10,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 @DataJpaTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class CategoryRepositoryUnitTest {
+class CategoryRepositoryIntegrationTest {
     @Autowired
     private CategoryRepository categoryRepository;
 

@@ -8,7 +8,7 @@ import java.util.List;
 
 @DataJpaTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class LoanRepositoryUnitTest {
+class LoanRepositoryIntegrationTest {
 
     @Autowired
     private UserRepository userRepository;

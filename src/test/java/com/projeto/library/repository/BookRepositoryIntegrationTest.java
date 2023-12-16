@@ -3,7 +3,6 @@ package com.projeto.library.repository;
 import com.projeto.library.model.Author;
 import com.projeto.library.model.Book;
 import com.projeto.library.model.Category;
-import com.projeto.library.model.Loan;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -15,7 +14,7 @@ import java.util.List;
 
 @DataJpaTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class BookRepositoryUnitTest {
+class BookRepositoryIntegrationTest {
     @Autowired
     private AuthorRepository authorRepository;
     @Autowired
